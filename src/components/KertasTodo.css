@@ -1,0 +1,183 @@
+.kertas-todo {
+  background-color: var(--paper);
+  color: var(--ink);
+  border-radius: 4px 4px 18px 4px;
+  padding: 24px 20px 20px;
+  position: relative;
+  transform: rotate(0.6deg);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 33px,
+    rgba(110, 93, 85, 0.18) 33px,
+    rgba(110, 93, 85, 0.18) 34px
+  );
+  background-position: 0 40px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kertas-todo__selotip {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 90px;
+  height: 24px;
+  background-color: rgba(184, 165, 236, 0.65);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.kertas-todo__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(110, 93, 85, 0.3);
+}
+
+.kertas-todo__judul {
+  font-family: var(--f-hand);
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.kertas-todo__counter {
+  font-family: var(--f-body);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.kertas-todo__isi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kertas-todo__kosong {
+  font-family: var(--f-hand);
+  font-size: 20px;
+  color: var(--ink-soft);
+  text-align: center;
+  margin: 40px 0;
+}
+
+.kertas-todo__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.kertas-todo__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 34px;
+}
+
+.kertas-todo__check {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 7px 9px 6px 8px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.kertas-todo__check--selesai {
+  background: var(--sage);
+  border-color: var(--sage);
+}
+
+.kertas-todo__teks {
+  font-family: var(--f-hand);
+  font-size: 21px;
+  color: var(--ink);
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.kertas-todo__teks--selesai {
+  text-decoration: line-through 2px var(--ink-soft);
+  color: var(--ink-soft);
+}
+
+.kertas-todo__hapus {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.4;
+  padding: 0 4px;
+  line-height: 1;
+  transition: opacity 0.15s;
+}
+
+.kertas-todo__hapus:hover,
+.kertas-todo__hapus:focus-visible {
+  opacity: 1;
+}
+
+.kertas-todo__form {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.kertas-todo__input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed var(--ink-soft);
+  font-family: var(--f-hand);
+  font-size: 20px;
+  color: var(--ink);
+  padding: 4px 0;
+  outline: none;
+}
+
+.kertas-todo__input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.7;
+}
+
+.kertas-todo__btn-tambah {
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-family: var(--f-body);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.kertas-todo__btn-tambah:hover {
+  background: var(--ink-soft);
+}
+
+@media (max-width: 680px) {
+  .kertas-todo {
+    transform: none;
+    border-radius: var(--radius);
+  }
+}

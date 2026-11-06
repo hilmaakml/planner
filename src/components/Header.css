@@ -1,0 +1,131 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.header__kiri {
+  flex: 1;
+  min-width: 220px;
+}
+
+.header__sapaan {
+  font-family: var(--f-hand);
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.header__nama {
+  color: var(--lamp);
+}
+
+.header__tanggal {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.header__kanan {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__jam {
+  font-family: var(--f-pix);
+  font-size: 38px;
+  font-variant-numeric: tabular-nums;
+  color: var(--lamp);
+  text-shadow: 0 0 12px rgba(255, 190, 122, 0.5);
+}
+
+.header__suara {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 24px;
+}
+
+.header__suara-batang {
+  width: 3px;
+  background: var(--muted);
+  border-radius: 2px;
+  transition: height 0.15s;
+}
+
+.header__suara-batang:nth-child(1) {
+  height: 10px;
+}
+
+.header__suara-batang:nth-child(2) {
+  height: 16px;
+}
+
+.header__suara-batang:nth-child(3) {
+  height: 12px;
+}
+
+.header__suara:hover .header__suara-batang {
+  background: var(--fg);
+}
+
+.header__suara[aria-label*="Matikan"] .header__suara-batang:nth-child(1) {
+  animation: batang1 0.6s infinite;
+}
+
+.header__suara[aria-label*="Matikan"] .header__suara-batang:nth-child(2) {
+  animation: batang2 0.7s infinite;
+}
+
+.header__suara[aria-label*="Matikan"] .header__suara-batang:nth-child(3) {
+  animation: batang3 0.5s infinite;
+}
+
+@keyframes batang1 {
+  0%, 100% { height: 10px; }
+  50% { height: 18px; }
+}
+
+@keyframes batang2 {
+  0%, 100% { height: 16px; }
+  50% { height: 8px; }
+}
+
+@keyframes batang3 {
+  0%, 100% { height: 12px; }
+  50% { height: 20px; }
+}
+
+.header__keluar {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px 8px;
+  font-family: var(--f-body);
+}
+
+.header__keluar:hover {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header__kanan {
+    justify-content: space-between;
+  }
+}

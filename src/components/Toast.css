@@ -1,0 +1,56 @@
+.toast {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  right: max(20px, env(safe-area-inset-right));
+  background: var(--dusk);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast__pesan {
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.toast__btn-urungkan {
+  background: none;
+  border: none;
+  color: var(--lilac);
+  font-family: var(--f-body);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toast__btn-urungkan:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .toast {
+    right: 50%;
+    transform: translateX(50%);
+    width: calc(100% - 32px);
+    max-width: 360px;
+    justify-content: space-between;
+  }
+}

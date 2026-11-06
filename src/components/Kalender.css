@@ -1,0 +1,171 @@
+.kalender {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kalender__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.kalender__btn-bulan {
+  background: none;
+  border: none;
+  color: var(--fg);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.kalender__btn-bulan:hover {
+  color: var(--lamp);
+}
+
+.kalender__judul {
+  font-family: var(--f-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  flex: 1;
+  text-align: center;
+}
+
+.kalender__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.kalender__hari-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  padding: 4px 0;
+}
+
+.kalender__hari-label--minggu {
+  color: var(--rose);
+}
+
+.kalender__tanggal {
+  aspect-ratio: 1;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+
+.kalender__tanggal--diluar {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.kalender__tanggal--terpilih {
+  background: var(--lilac);
+}
+
+.kalender__tanggal--terpilih .kalender__tanggal-angka {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.kalender__tanggal--minggu.kalender__tanggal--terpilih {
+  background: var(--lilac);
+}
+
+.kalender__tanggal-angka {
+  color: var(--fg);
+  font-family: var(--f-pix);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.15s;
+}
+
+.kalender__tanggal-angka--hari-ini {
+  color: var(--lamp);
+  font-weight: 700;
+}
+
+.kalender__titik-hari-ini {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px dashed var(--lamp);
+  border-radius: 50%;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kalender__titik {
+  position: absolute;
+  bottom: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.kalender__titik--lamp {
+  background: var(--lamp);
+}
+
+.kalender__titik--sage {
+  background: var(--sage);
+}
+
+.kalender__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.kalender__legenda {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+}
+
+.kalender__legenda-titik {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.kalender__legenda-titik--lamp {
+  background: var(--lamp);
+}
+
+.kalender__legenda-titik--sage {
+  background: var(--sage);
+}
+
+.kalender__ke-hari-ini {
+  background: none;
+  border: none;
+  color: var(--lamp);
+  cursor: pointer;
+  font-family: var(--f-body);
+  font-size: 12px;
+  padding: 0;
+}
+
+.kalender__ke-hari-ini:hover {
+  text-decoration: underline;
+}

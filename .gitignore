@@ -1,0 +1,25 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables and secrets
+.env*
+!.env.example
+
+# Deployment
+.vercel/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+CLAUDE.md
+conventions.md
+design.md
+prd.md

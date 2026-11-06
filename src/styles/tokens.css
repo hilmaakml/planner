@@ -1,0 +1,36 @@
+:root {
+  /* Malam */
+  --night: #1c1a2e;
+  --dusk: #2a2744;
+  --panel: #322e50;
+  --line: #47416e;
+
+  /* Teks */
+  --fg: #ece6f7;
+  --muted: #a69dc8;
+
+  /* Aksen */
+  --lamp: #ffbe7a;
+  --lilac: #b8a5ec;
+  --sage: #9fcaa5;
+  --rose: #f3a6b6;
+
+  /* Kertas (to-do) */
+  --paper: #f7e2bd;
+  --paper-2: #efd4a6;
+  --ink: #2b2338;
+  --ink-soft: #6e5d55;
+
+  /* Font */
+  --f-hand: "Gaegu", "Comic Neue", cursive;
+  --f-body: "M PLUS Rounded 1c", "Nunito", system-ui, sans-serif;
+  --f-pix: "DotGothic16", "Courier New", monospace;
+
+  /* Ukuran & Spasi */
+  --radius: 18px;
+  --gutter: 16px;
+  --safe-left: max(var(--gutter), env(safe-area-inset-left));
+  --safe-right: max(var(--gutter), env(safe-area-inset-right));
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
